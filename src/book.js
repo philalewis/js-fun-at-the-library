@@ -11,10 +11,23 @@ function buildMainCharacter(name, age, pronouns) {
   return character;
 }
 
+var reviews = [];
+
+function saveReview(review, reviews) {
+  for (let i = 0; i < reviews.length; i++) {
+    if (review === reviews[i]) {
+      return;
+    }
+  }
+  reviews.push(review);
+  return reviews;
+};
+
+
 module.exports = {
   createTitle,
   buildMainCharacter,
-  // saveReview,
+  saveReview,
   // calculatePageCount,
   // writeBook,
   // editBook
