@@ -11,7 +11,6 @@ function buildMainCharacter(name, age, pronouns) {
   return character;
 }
 
-var reviews = [];
 
 function saveReview(review, reviews) {
   for (let i = 0; i < reviews.length; i++) {
@@ -23,12 +22,15 @@ function saveReview(review, reviews) {
   return reviews;
 };
 
+function calculatePageCount(title, pageCount) {
+  return title.length * 20;
+};
 
 module.exports = {
   createTitle,
   buildMainCharacter,
   saveReview,
-  // calculatePageCount,
+  calculatePageCount,
   // writeBook,
   // editBook
 }
