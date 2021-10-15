@@ -21,15 +21,15 @@ function saveReview(review, reviews) {
   return reviews;
 };
 
-function calculatePageCount(title, pageCount) {
+function calculatePageCount(title) {
   return title.length * 20;
 };
 
-function writeBook(bookTitle, bookCharacter, genre) {
+function writeBook(title, character, genre) {
   book = {
-    title: bookTitle,
-    mainCharacter: bookCharacter,
-    pageCount: calculatePageCount(bookTitle),
+    title: title,
+    mainCharacter: character,
+    pageCount: calculatePageCount(title),
     genre: genre
   }
   return book;
