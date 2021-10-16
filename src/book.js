@@ -11,13 +11,13 @@ function buildMainCharacter(name, age, pronouns) {
   return character;
 }
 
-function saveReview(review, reviews) {
+function saveReview(newReview, reviews) {
   for (let i = 0; i < reviews.length; i++) {
-    if (review === reviews[i]) {
+    if (newReview === reviews[i]) {
       return reviews;
     }
   }
-  reviews.push(review);
+  reviews.push(newReview);
   return reviews;
 };
 
