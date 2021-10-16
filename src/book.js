@@ -12,10 +12,8 @@ function buildMainCharacter(name, age, pronouns) {
 }
 
 function saveReview(newReview, reviews) {
-  for (let i = 0; i < reviews.length; i++) {
-    if (newReview === reviews[i]) {
-      return reviews;
-    }
+  if (reviews.includes(newReview)) {
+    return reviews;
   }
   reviews.push(newReview);
   return reviews;
