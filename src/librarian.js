@@ -2,17 +2,6 @@ class Librarian {
   constructor(name, library) {
     this.name = name;
     this.library = library;
-    // function createLibrary(name) {
-    //   var library = {
-    //     name: name,
-    //     shelves: {
-    //       fantasy: [],
-    //       fiction: [],
-    //       nonFiction: [],
-    //     }
-    //   }
-    //   return library;
-    // }
     this.greetPatron = function(patronName, isMorning) {
       if (isMorning === true) {
         return `Good morning, ${patronName}!`
@@ -39,6 +28,9 @@ class Librarian {
         }
       }
       return `Sorry, we do not have ${bookTitle}`
+    }
+    this.calculateLateFee = function(daysLate) {
+      return Math.ceil(daysLate * .25);
     }
   }
 }
