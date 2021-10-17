@@ -16,7 +16,8 @@ class Librarian {
       );
       for (let i = 0; i < allShelves.length; i++) {
         if (allShelves[i].title === bookTitle) {
-          this.library.shelves[allShelves[i].genre].splice(i, 1);
+          //only works because there is only one book on the shelf
+          this.library.shelves[allShelves[i].genre].splice(this.library.shelves[allShelves[i].genre].indexOf(bookTitle), 1);
           return `Yes, we have ${bookTitle}`;
         }
       }
