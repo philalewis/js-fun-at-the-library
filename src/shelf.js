@@ -15,14 +15,10 @@ function unshelfBook(bookTitle, shelf) {
 }
 
 function listTitles(shelf) {
-  var titleList = '';
-  for (let i = 0; i < shelf.length; i++) {
-      if (titleList === '') {
-        titleList += shelf[i].title;
-      } else {
+  var titleList = `${shelf[0].title}`;
+  for (let i = 1; i < shelf.length; i++) {
         titleList += ', ' + shelf[i].title;
       }
-  }
   return titleList;
 }
 
