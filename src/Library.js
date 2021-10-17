@@ -16,14 +16,17 @@ function addBook(library, book) {
 
 function checkoutBook(library, book, shelf) {
   var message = `You have now checked out ${book} from the ${library.name}`;
-  for (let i = 0; i < library.shelves[shelf].length; i++) {
-    if (book === library.shelves[shelf][i].title) {
-      library.shelves[shelf].splice(i, 1);
-      return message;
-    }
+  if (library.shelves.shelf.includes(book.title)) {
+    return message;
   }
   return `Sorry, there are currently no copies of ${book} available at the ${library.name}`
 }
+// for (let i = 0; i < library.shelves[shelf].length; i++) {
+//   if (book === library.shelves.shelf[i].title) {
+//     library.shelves[shelf].splice(i, 1);
+//     return message;
+//   }
+// }
 
 module.exports = {
   createLibrary,
