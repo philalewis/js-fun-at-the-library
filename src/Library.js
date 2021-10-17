@@ -1,5 +1,5 @@
 function createLibrary(name) {
-  var library = {
+  return {
     name: name,
     shelves: {
       fantasy: [],
@@ -7,11 +7,10 @@ function createLibrary(name) {
       nonFiction: [],
     }
   }
-  return library;
 }
 
 function addBook(library, book) {
-  library.shelves[book.genre].push(book);
+  return library.shelves[book.genre].push(book);
 }
 
 function checkoutBook(library, book, shelf) {
@@ -24,7 +23,6 @@ function checkoutBook(library, book, shelf) {
   }
   return `Sorry, there are currently no copies of ${book} available at the ${library.name}`
 }
-
 
 module.exports = {
   createLibrary,
